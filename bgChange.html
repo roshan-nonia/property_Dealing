@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid gray 2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #violet{
+            background-color: #ce9aff;
+        }
+        #black{
+            background-color: black;
+        }
+        #color-change{
+            text-align: right;
+        }
+    </style>
+    <title>Background changer</title>
+</head>
+<body>
+    <div id="color-change">
+        <span class="btn" id="white" onclick="bg('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="bg('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="bg('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="bg('#000000')"></span>
+    </div>
+    <div><h3><a href="index.html">back</a>&nbsp; &nbsp;<a href="#">next</a></h3></div>
+    <h1 class="text">Pcs Global Team</h1>
+    <img src="img/teams-posting.jpg" alt="">
+    <p class="text">
+        I sincerely hope you and your family are in good health and protected from this global pandemic.
+        I strongly believe in coming months situations will improve better.
+        I encourage you to take some time to explore our website and read more about our history, 
+        our work culture, our rograms and our community. I hope that once you do, you will feel, as I do,
+        that PCS Global sees each human beings as a unique individual with great potential.
+        Our initiative is to bring joy and smile to our youths and our customers and our partners
+        "Our initiative is to bring joy and smile to our youths and our customers and our partners"
+        "This organization is for everyone. PCS Global is a People Company where people are the most 
+        valuable asset, and where company success is dependent on our workforce being successful. "
+        I sincerely hope you and your family are in good health and protected from this global pandemic.
+        I strongly believe in coming months situations will improve better.
+        I encourage you to take some time to explore our website and read more about our history, 
+        our work culture, our rograms and our community. I hope that once you do, you will feel, as I do,
+        that PCS Global sees each human beings as a unique individual with great potential.
+        Our initiative is to bring joy and smile to our youths and our customers and our partners
+        "Our initiative is to bring joy and smile to our youths and our customers and our partners"
+        "This organization is for everyone. PCS Global is a People Company where people are the most 
+        valuable asset, and where company success is dependent on our workforce being successful. "
+        I sincerely hope you and your family are in good health and protected from this global pandemic.
+        I strongly believe in coming months situations will improve better.
+        I encourage you to take some time to explore our website and read more about our history, 
+        our work culture, our rograms and our community. I hope that once you do, you will feel, as I do,
+        that PCS Global sees each human beings as a unique individual with great potential.
+        Our initiative is to bring joy and smile to our youths and our customers and our partners
+        "Our initiative is to bring joy and smile to our youths and our customers and our partners"
+        "This organization is for everyone. PCS Global is a People Company where people are the most 
+        valuable asset, and where company success is dependent on our workforce being successful. "
+        I sincerely hope you and your family are in good health and protected from this global pandemic.
+        I strongly believe in coming months situations will improve better.
+        I encourage you to take some time to explore our website and read more about our history, 
+        our work culture, our rograms and our community. I hope that once you do, you will feel, as I do,
+        that PCS Global sees each human beings as a unique individual with great potential.
+        Our initiative is to bring joy and smile to our youths and our customers and our partners
+        "Our initiative is to bring joy and smile to our youths and our customers and our partners"
+        "This organization is for everyone. PCS Global is a People Company where people are the most 
+        valuable asset, and where company success is dependent on our workforce being successful. "
+    </p>
+    <script>
+       function bg(color){
+          document.body.style.background=color;
+          let txt=document.getElementsByClassName("text");
+          if(color=="#000000"){
+            for(let elm of txt){
+                elm.style.color="white";
+            }
+          }else{
+            for(let elm of txt){
+                elm.style.color="black";
+            }
+          }
+       } 
+    </script>
+</body>
+</html>

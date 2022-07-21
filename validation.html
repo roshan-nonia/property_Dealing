@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            align-items: center;
+            background-color: #3498db;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+        }
+        #form-container{
+            background-color: white;
+            width: 350px;
+            height: 400px;
+            padding: 50px;
+            text-align: center;
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+        }
+        input{
+            width: 300px;
+            margin: 20px 0px;
+            padding: 10px;
+        }
+        input[type="submit"]{
+            width: 320px;
+            background-color: #3498db;
+            border: 0px;
+            color: white;
+        }
+        .error{
+            color: red;
+            margin: 0px;
+            text-align: left;
+        }
+    </style>
+    <title>Form Validation</title>
+</head>
+<body>
+  <div id="form-container">
+    <h3 style="color: red;">you need to login to view profile...!!</h3>
+    <h1>Login Here</h1>
+    <form action="" onsubmit="return validateForm()">
+       <input type="text" id="username" placeholder="Enter username"><br>
+       <p id="usererror" class="error"></p>
+       <input type="password" id="password" placeholder="Enter password"><br>
+       <p id="passerror" class="error"></p>
+       <input type="submit">
+    </form>
+
+    <a href="#">forget password</a>  &nbsp; &nbsp;
+    <a href="registration.html">Create New Account</a><br><br>
+    <a href="registration.html">Copyright 1992-2022 by Pcs Global.@ All Rights Reserve.</a>
+  </div>  
+  <script>
+    let username=document.getElementById("username");
+    let password=document.getElementById("password");
+    let flag=1;
+    function validateForm(){
+        if(username.value == ""){
+          document.getElementById("usererror").innerHTML="user name is empty";
+          flag=0;
+        }else if(username.value.length<3){
+          document.getElementById("usererror").innerHTML="user name require minmum 3 character";
+          flag=0;
+        }else{
+            document.getElementById("usererror").innerHTML="";
+            flag=1;
+        }
+        if(password.value == ""){
+            document.getElementById("passerror").innerHTML="password is empty";
+            flag=0;
+        }else{
+            document.getElementById("passerror").innerHTML="";
+            flag=1;
+        }
+        if(flag){
+           return true;
+        }else{
+            return false;
+        }
+    }
+  </script>
+</body>
+</html>

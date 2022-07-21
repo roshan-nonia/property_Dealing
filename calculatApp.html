@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body{
+            align-items: center;
+            background-color: #3498db;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+        }
+        #div-container{
+            background-color: white;
+            width: 350px;
+            height: 400px;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+    <title>Calculator demo</title>
+</head>
+<body>
+   
+<div id="div-container">
+    <h1>WELCOME TO MY R@Coder tech</h1>
+    <h3>Perform Any Arethamatic Operatopn</h3>
+    <form name="find">
+        <input type="text" size="20" name="calculator">
+        <input type="button" name="b1" value="CALCULATE" onclick="cal()" style="color: blue;">
+        <input type="reset" name="b2" value="RESET" style="color: green;"><br></br>
+        ANSWER: <input type="text" size="20" name="answer">
+    </form>
+
+</div>
+    <script>
+        function cal(){
+            document.find.answer.value=eval(document.find.calculator.value)
+        }
+    </script>
+
+</body>
+</html>

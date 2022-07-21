@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body{
+        align-items: center;
+        background-color: #3498db;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+    }
+    #form-container{
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        padding: 50px;
+        text-align: center;
+    }
+    .fsize{
+        font-size: larger;
+    }
+    td{
+            width: 200px;
+            margin-right: 10px;
+            padding: 12px;
+        }
+       
+ </style>
+    <title>registration page</title>
+</head>
+<body>
+    <div id="form-container">
+        <h1>Registration Form</h1>
+    <form action="process"  onsubmit="return validateForm()">
+    <table>
+                    <tr>
+                        <td class="fsize">Username:</td>
+                        <td><input type="text" name="uname" placeholder="Enter Here" /></td>
+                        <td><p id="nerror" class="clr"></p></td>
+                    </tr>
+                    <tr>
+                        <td class="fsize">Password:</td>
+                        <td><input type="password" name="upass" placeholder="Enter Here" /></td>
+                        <td><p id="perror" class="clr"></p></td>
+                    </tr>
+                    <tr>
+                        <td class="fsize">Email:</td>
+                        <td><input type="email" name="uemail" placeholder="Enter Here" /></td>
+                        <td><p id="Eerror" class="clr"></p></td>
+                    </tr>
+                    <tr>
+                        <td class="fsize">Phone:</td>
+                        <td><input type="number" name="uemail" placeholder="Enter Here" /></td>
+                        <td><p id="pherror" class="clr"></p></td>
+                    </tr>
+                    <tr>
+                        <td class="fsize">Birth Date:</td>
+                        <td><input type="date" name="uemail" ></td>
+                        <td><p id="berror" class="clr"></p></td>
+                    </tr>
+                    <tr>
+                        <td class="fsize">Select Gender:</td>
+                        <td><input type="radio" name="ugender" value="male" />Male
+                            &nbsp; &nbsp; <input type="radio" name="ugender" value="female" />Female</td>
+                    </tr>
+                    <tr>
+                        <td class="fsize">Select Your Course:</td>
+                        <td><select name="ucourse">
+                                <option>java</option>
+                                <option>c</option>
+                                <option>c++</option>
+                                <option>python</option>
+                                <option>php</option>
+                                <option>Rubi</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><input type="checkbox"
+                            value="checked" name="condition"></td> 
+                        <td class="fsize">Agree Term and Condition</td>
+                        <td><p id="cerror" class="clr"></p></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" style="background-color: #3498db;" onclick="showmsg()">Register</button>
+                            <button type="reset" style="background-color: #3498db;">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+                <a href="index.html">Back to Home</a>
+                </div>
+                <script>
+                   function showmsg() {
+                          alert("you are successfully registered...!!");
+                          }
+                </script>
+    </body>
+    </html>

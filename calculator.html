@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculatior</title>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Manually Performe your Action</h1>
+        <h3>Take the value and choose your action</h3>
+    <form>
+       First Value: <input type="text" name="val1" id="val1"><br><br>
+        Second Value: <input type="text" name="val2" id="val2"><br><br>
+        <button type="button" onclick="suma()" name="btn">Add</button>
+        <button type="button" onclick="sumb()" name="btn">sub</button>
+        <button type="button" onclick="sumc()" name="btn">mult</button>
+        <button type="button" onclick="sumd()" name="btn">divid</button>
+        <input type="reset" name="b2" value="RESET"><br><br>
+      See Result:  <input name="total" id="total" value=""><br><br>
+        
+
+    </form>
+ </div>   
+    <script>
+        function suma() {
+            var val1 = document.getElementById('val1').value;
+            var val2 = document.getElementById('val2').value;
+            var sum = Number(val1) + Number(val2);
+            document.getElementById('total').value = sum;
+        }
+
+        function sumb() {
+            var val1 = document.getElementById('val1').value;
+            var val2 = document.getElementById('val2').value;
+            var sum = Number(val1) - Number(val2);
+            document.getElementById('total').value = sum;
+        }
+
+        function sumc() {
+            var val1 = document.getElementById('val1').value;
+            var val2 = document.getElementById('val2').value;
+            var sum = Number(val1) * Number(val2);
+            document.getElementById('total').value = sum;
+        }
+        function sumd() {
+            var val1 = document.getElementById('val1').value;
+            var val2 = document.getElementById('val2').value;
+            var sum = Number(val1) / Number(val2);
+            document.getElementById('total').value = sum;
+        }
+
+    </script>
+
+</body>
+
+</html>

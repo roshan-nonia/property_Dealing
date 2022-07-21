@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            color: #d7dfe4;
+        }
+        .digit{
+            font-size: 150px;
+            font-weight: bold;
+        }
+        .txt{
+            font-size: 40px;
+            font-weight: bold;
+        }
+        #btn-container{
+             text-align: center;
+             margin-top: 40px;
+        }
+        .btn{
+            padding: 7px 25px;
+            font-size: 15px;
+            margin: 0px 10px;
+            color: white;
+            border: 0px;
+            cursor: pointer;
+        }
+        #start{
+            background-color: #1abc9c;
+        }
+        #stop{
+            background-color: #e74c3c;
+        }
+        #reset{
+            background-color: #3498;
+        }
+    </style>
+    <title>stop watch</title>
+</head>
+<body>
+    <div class="container">
+         <div id="item">
+            <span class="digit" id="hr">00</span>
+            <span class="txt">Hr</span>
+            <span class="digit" id="min">00</span>
+            <span class="txt">Min</span>
+            <span class="digit" id="sec">00</span>
+            <span class="txt">Sec</span>
+            <span class="digit" id="count">00</span>
+         </div>
+         <div id="btn-container">
+            <button class="btn" id="start" onclick="start()">START</button>
+            <button class="btn" id="stop"  onclick="stop()">STOP</button>
+            <button class="btn" id="reset" onclick="reset()">RESET</button>
+         </div>
+    </div>
+    <script src="swatch.js"></script>
+</body>
+</html>

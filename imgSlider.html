@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0px;
+        }
+        .slide-container{
+             position: relative;
+             width: 100%;
+
+        }
+        .slide img{
+              width: 100%;
+        }
+        .arrow{
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.712);
+            padding: 8px 18px;
+            border-radius: 50%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .next{
+            right: 10px;
+        }
+        .prev{
+            left: 10px;
+        }
+        .caption{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 0px;
+        }
+        .slide{
+            display: none;
+        }
+        .img-size{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+    <title>Image Slider</title>
+</head>
+<body>
+    <div style="background-color:#3498db; text-align: center; padding-top: 1px; padding-bottom: 1px;">
+        <h1>PCS Global Members</h1>
+    </div>
+    <div class="slide-container">
+         <div class="slide">
+            <img src="img/3.png" alt="" class="img-size">
+            <div class="caption">our Team</div>
+         </div>
+         <div class="slide">
+            <img src="img/office-function.jpg" alt="" class="img-size">
+            <div class="caption">Office Function</div>
+         </div>
+         <div class="slide">
+            <img src="img/celebration.jpg" alt="" class="img-size">
+            <div class="caption"> celebration</div>
+         </div>
+         <div class="slide">
+            <img src="img/teams-posting.jpg" alt="" class="img-size">
+            <div class="caption">Team</div>
+         </div>
+         <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+         <span class="arrow next" onclick="controller(1)">&#10095</span>
+    </div>
+    
+    <script>
+        let flag=0;
+        function controller(x){
+            flag=flag+x;
+            slideshow(flag);
+        }
+        slideshow(flag);
+           function slideshow(num){
+            let slides=document.getElementsByClassName("slide");
+            if(num==slides.length){
+                flag=0;
+                num=0;
+            }
+            if(num<0){
+                flag=slides.length-1;
+                num=slides.length-1;
+            }
+            for(let y of slides){
+                y.style.display="none";
+            }
+            slides[num].style.display="block";
+           }
+        
+    </script>
+</body>
+</html>
